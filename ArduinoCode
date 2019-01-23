@@ -1,0 +1,77 @@
+const int note1 = 1;
+const int note2 = 2;
+const int note3 = 3;
+const int note4 = 5;
+const int note5 = 6;
+const int note6 = 7;
+const int note7 = 8;
+const int note8 = 9;
+
+const int led = 11;
+const int buzzerPin = 12;
+
+void setup() {
+  pinMode(note1,INPUT);
+  pinMode(note2,INPUT);
+  pinMode(note3,INPUT);
+  pinMode(note4,INPUT);
+  pinMode(note5,INPUT);
+  pinMode(note6,INPUT);
+  pinMode(note7,INPUT);
+  pinMode(note8,INPUT);
+}
+
+void loop() {
+  digitalWrite(note1,HIGH);
+  digitalWrite(note2,HIGH);
+  digitalWrite(note3,HIGH);
+  digitalWrite(note4,HIGH);
+  digitalWrite(note5,HIGH);
+  digitalWrite(note6,HIGH);
+  digitalWrite(note7,HIGH);
+  digitalWrite(note8,HIGH);
+  
+  delay(30);
+  while(digitalRead(note1) == LOW)
+  {
+    tone(buzzerPin, 300);
+    digitalWrite(led,HIGH);
+  }
+  while(digitalRead(note2) == LOW)
+  {
+    tone(buzzerPin, 450);
+    digitalWrite(led,HIGH);
+  }
+  while(digitalRead(note3) == LOW)
+  {
+    tone(buzzerPin, 600);
+    digitalWrite(led,HIGH);
+  }
+  while(digitalRead(note4) == LOW)
+  {
+    tone(buzzerPin, 700);
+    digitalWrite(led,HIGH);
+  }
+    while(digitalRead(note5) == LOW)
+  {
+    tone(buzzerPin, 800);
+    digitalWrite(led,HIGH);
+  }
+  while(digitalRead(note6) == LOW)
+  {
+    tone(buzzerPin, 900);
+    digitalWrite(led,HIGH);
+  }
+  while(digitalRead(note7) == LOW)
+  {
+    tone(buzzerPin, 1000);
+    digitalWrite(led,HIGH);
+  }
+  while(digitalRead(note8) == LOW)
+  {
+    tone(buzzerPin, 1100);
+    digitalWrite(led,HIGH);
+  }
+  noTone(buzzerPin);
+  digitalWrite(led,LOW);
+}
